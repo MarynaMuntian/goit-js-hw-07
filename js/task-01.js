@@ -1,2 +1,3 @@
 const ulEl = document.querySelector('#categories');
-console.log(ulEl);
+const categoriesQuantity = (ulEl) => `В списке ${ulEl.children.length} категорий`;
+categoriesQuantity();
