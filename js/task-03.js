@@ -18,3 +18,17 @@ const addList = images.forEach(image => {
   const { url, alt } = image;
   list.insertAdjacentHTML('afterbegin', `<li><img src = "${url}" alt = "${alt}"></img></li>`);
 })
+
+list.style.display = 'flex';
+list.style.alignItems = 'center';
+list.style.listStyle = 'none';
+list.style.margin = '-15px 0 0 -15px';
+
+const items = document.querySelectorAll('li');
+items.forEach(item => {
+  item.style.margin = '15px 0 0 15px';
+  item.style.flexBasis = 'calc(100% / 3 - 15px)';
+});
+
+const imgs = document.querySelectorAll('img');
+imgs.forEach(img => img.style.width = '320px');
