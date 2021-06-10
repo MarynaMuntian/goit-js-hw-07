@@ -8,14 +8,21 @@ const form = document.getElementById('validation-input');
 const validation = (event) => {
     
     if (form.value.length === Number(form.getAttribute('data-length'))) {
-        form.classList.add('valid');
-        form.classList.remove('invalid');
+        // form.classList.add('valid');
+        // form.classList.remove('invalid');
+        editClass('valid', 'invalid');
     }
 
     else {
-        form.classList.add('invalid');
-        form.classList.remove('valid');
+        // form.classList.add('invalid');
+        // form.classList.remove('valid');
+        editClass('invalid', 'valid');
     }
 }
+
+const editClass = (addClass, removeClass) => {
+    form.classList.add(addClass);
+    form.classList.remove(removeClass);
+};
 
 form.addEventListener("blur", validation);
