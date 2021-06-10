@@ -23,10 +23,16 @@ const images = [
 ];
 
 const list = document.getElementById('gallery');
-const addList = images.forEach(image => {
+
+// const addList = images.forEach(image => {
+//   const { url, alt } = image;
+//   list.insertAdjacentHTML('afterbegin', `<li><img src = "${url}" alt = "${alt}"></img></li>`);
+// })
+
+const addList = images.map(image => {
   const { url, alt } = image;
   list.insertAdjacentHTML('afterbegin', `<li><img src = "${url}" alt = "${alt}"></img></li>`);
-})
+});
 
 list.style.display = 'flex';
 list.style.alignItems = 'center';
